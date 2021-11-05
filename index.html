@@ -44,6 +44,9 @@
         recusandae beatae necessitatibus pariatur nihil?
     </p>
 
+    <h1 class="h1">heading1</h1>
+    <h1 class="h1">heading2</h1>
+    <h1 class="h1">heading3</h1>
     <button onclick="callClass()">click</button>
     <script>
         // For Id 
@@ -56,10 +59,16 @@
         // For class
 
         function callClass() {
-            const x = document.getElementsByClassName("header");
-            x[0].innerHTML = "Work hard ";
-            const y = document.getElementsByClassName("header1");
-            y[0].style.color = "blue";
+            // const x = document.getElementsByClassName("header");
+            // x[0].innerHTML = "Work hard ";
+            // const y = document.getElementsByClassName("header1");
+            // y[0].style.color = "blue";
+            var x = document.getElementsByClassName("h1");
+            for (var i = 0; i < x.length; i++) {
+                console.log(x[i].innerHTML);
+            }
+
+
 
         }
     </script>
