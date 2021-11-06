@@ -1,27 +1,13 @@
-// for(let i=0;i<list.length; i++) {
-//     console.log(i);
-// }
+// for more easies method 
+list = [3, 4, 5, 22, 11, 99, 77]
 
-//Higher order array method
+const sum = list.map(function (m) {
+    return m * m * m;
+}).filter(function (f) {
+    return f > 50;
+}).reduce(function (prev, curr) {
+    return prev + curr;
+}, 0)
 
-const list = [29, 4, 56, 77, 54, 22];
-list.forEach(function (l, key, arry) {
-    console.log(l);
-    // console.log(key);
-    // console.log(arry);
-})
-const newList = list.map(function (l) {
-    return l * l;
-})
-console.log(newList);
+console.log(sum)
 
-// for filter
-const passed = list.filter(function (l) {
-    return l % 2 == 0;
-})
-console.log(passed);
-
-const redu = list.reduce(function (prev, curr) {
-    return prev + curr
-})
-console.log(redu);
