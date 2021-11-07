@@ -19,4 +19,4 @@ else {
     document.write(false)
 }
 
-// document.write(typeof a,b)
+document.write(typeof a, b)
