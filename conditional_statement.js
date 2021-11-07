@@ -51,5 +51,5 @@ switch (counrty) {
         document.write("You belong from Uk");
         break;
     default:
-        document.write("Invaild Entry")
+        document.write("Invaild Entry");
 }
