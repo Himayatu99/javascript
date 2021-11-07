@@ -27,7 +27,6 @@ function test() {
 }
 
 // 2) Global scope:access outside a function
-
 var a = 50;
 var b = 40;
 function test_function() {
