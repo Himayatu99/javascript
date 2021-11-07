@@ -5,73 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>javascript</title>
-    <style>
-        #para {
-            background-color: green;
-            color: white;
-            font-family: 'Courier New', Courier, monospace;
-            font-weight: bold;
-        }
-
-        .header1 {
-            color: green;
-        }
-    </style>
-
+    <title>Conditional statements or decision</title>
+    <script src="function.js"></script>
 </head>
 
 <body>
-    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Et, fugiat ratione maiores, corrupti qui illum, sapiente
-        autem dolore facilis dolor libero eaque soluta quo voluptatem
-        recusandae beatae necessitatibus pariatur nihil?
-    </p>
-
-    <button onclick="changeColor()">click here</button>
-
-    <!-- For class -->
-    <p class="header">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Et, fugiat ratione maiores, corrupti qui illum, sapiente
-        autem dolore facilis dolor libero eaque soluta quo voluptatem
-        recusandae beatae necessitatibus pariatur nihil?
-    </p>
-    <p class="header1">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Et, fugiat ratione maiores, corrupti qui illum, sapiente
-        autem dolore facilis dolor libero eaque soluta quo voluptatem
-        recusandae beatae necessitatibus pariatur nihil?
-    </p>
-
-    <h1 class="h1">heading1</h1>
-    <h1 class="h1">heading2</h1>
-    <h1 class="h1">heading3</h1>
-    <button onclick="callClass()">click</button>
-    <script>
-        // For Id 
-        function changeColor() {
-            document.getElementById('para').style.backgroundColor = "red";
-            document.getElementById("para").style.color = "black";
-            document.getElementById("para").style.fontFamily = 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
-            document.getElementById("para").style.fontWeight = "bold";
-        }
-        // For class
-
-        function callClass() {
-            // const x = document.getElementsByClassName("header");
-            // x[0].innerHTML = "Work hard ";
-            // const y = document.getElementsByClassName("header1");
-            // y[0].style.color = "blue";
-            var x = document.getElementsByClassName("h1");
-            for (var i = 0; i < x.length; i++) {
-                console.log(x[i].innerHTML);
-            }
-
-
-
-        }
-    </script>
+    <!-- // local scope -->
+    <button onclick="test()">Run function</button>
+    <br><br>
+    <!-- // Global scope -->
+    <button onclick="test_function()">Run </button>
 </body>
 
 </html>
