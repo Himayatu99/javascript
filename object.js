@@ -69,3 +69,9 @@ khan(obj)
 function khan({ age, academic }) {
     console.log(age, academic)
 }
+
+// Array destructuring
+
+const arr = ['Himayat', 'khan', 'Irfan', 'zia'];
+const [first, , second] = arr;
+console.log(first, second);
