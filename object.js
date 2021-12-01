@@ -82,3 +82,20 @@ const name = "Mr.Himayat";
 const lastName = "Khan";
 const FullName = `WELCOME  ${name}${lastName}`;
 console.log(FullName);
+
+//Default Arguments
+
+const hello = (name = 'N/A', lastName = 'N/A') => {
+    console.log(`Your Good name is : ${name} ${lastName}`)
+
+}
+const name = 'Himayat';
+// var name;
+const lastName = 'khan';
+hello(name, lastName)
+
+const div = (n = 4, d = 1) => {
+    console.log(n / d);
+    return n / d;
+}
+div(10,)
