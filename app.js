@@ -20,17 +20,19 @@ one()
 two()
 three()
 
-
+// call back hell
 
 const fouth = (callback) => {
     setTimeout(() => {
         console.log("one")
+        callback()
     }, 5000)
 }
 
 const five = (callback) => {
     setTimeout(() => {
         console.log("Two")
+        callback()
 
     }, 4000)
 }
@@ -38,6 +40,7 @@ const five = (callback) => {
 const six = (callback) => {
     setTimeout(() => {
         console.log("Three")
+        callback()
     }, 3000)
 }
 
@@ -51,4 +54,54 @@ fouth(() => {
 })
 
 
-//promise
+//promise is a class two part of promise one is resolve and the other is reject. 
+const seven = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('seven');
+            resolve();
+        }, 4000)
+    })
+}
+const eight = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('Eight')
+            resolve()
+        }, 2000)
+    })
+}
+const nine = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('Nine')
+            resolve()
+        }, 3000)
+    })
+}
+
+seven().then(() => {
+    eight().then(() => {
+        nine().then(() => {
+            console.log("Done it")
+        })
+    })
+})
+
+// Async await
+
+// const run = async () => {
+//     await seven();
+//     await eight();
+//     await nine();
+// }
+
+// run()
+
+async function name() {
+    await seven()
+    await eight()
+    await nine()
+}
+
+name()
